@@ -1,0 +1,81 @@
+  1 [core]
+  2         excludesfile = /Users/minzhang/.gitignore_global
+  3 [difftool "sourcetree"]
+  4         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  5         path =
+  6 [mergetool "sourcetree"]
+  7         cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  8         trustExitCode = true
+  9 [user]
+ 10         name = Fred
+ 11         email = fred.liu@verystar.cn
+ 12 [alias]
+ 13     aa = add .
+ 14     ag = reset HEAD^  # again
+ 15     b = branch
+ 16     bd = branch -D
+ 17     br = branch
+ 18     ca = commit --all
+ 19     cb = checkout -b
+ 20     changed = update-index --no-assume-unchanged  # revert op of `git unchanged`
+ 21     ci = commit
+ 22     cia = commit --all
+ 23     clone = clone -o o
+ 24     cm = commit --amend --no-edit --all
+ 25     co = checkout
+ 26     crp = cherry-pick
+ 27     d = diff
+ 28     dfl = diff --name-status  # diff and list name
+ 29     dfs = diff --staged
+ 30     dl = diff HEAD^
+ 31     f = fetch o --tags
+ 32     g = grep -in  # ignore case, line number
+ 33     hide = update-index --assume-unchanged  # same with `git unchanged`
+ 34     last = log -1 HEAD
+ 35     ld = stash pop
+ 36     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --dat    e=relative
+ 37     load = stash pop
+ 38     logg = log --graph --decorate --oneline --abbrev-commit --all  # VERY VERY useful command
+ 39     logo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --d    ate=relative --no-merges
+ 40     logs = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-comm    it --date=relative
+"~/.gitconfig" 79L, 3411C
+ 40     logs = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-comm    it --date=relative
+ 41     mgf = merge --ff-only
+ 42     p = push
+ 43     pa = push --all
+ 44     pd = push o -o merge_request.create -o merge_request.target=dev HEAD -f
+ 45     pf = push -f
+ 46     pl = pull --rebase
+ 47     pm = push o -o merge_request.create -o merge_request.target=master HEAD -f
+ 48     po = push o
+ 49     ps = push
+ 50     pull = pull --rebase
+ 51     puo = push -u o
+ 52     puod = push -u o -o merge_request.create -o merge_request.target=dev
+ 53     puof = push -u o -o merge_request.create -o merge_request.target=freeze
+ 54     puom = push -u o -o merge_request.create -o merge_request.target=master
+ 55     puz = push -u z
+ 56     puzd = push -u z -o merge_request.create -o merge_request.target=dev
+ 57     puzm = push -u z -o merge_request.create -o merge_request.target=master
+ 58     rb = rebase
+ 59     rbc = rebase --continue
+ 60     rbi = rebase -i  # if there's only one git command you should learn, it'll be `git rebase`
+ 61     rd = rebase o/HEAD
+ 62     regret = reset HEAD^  # regret last commit, same with `git ag`
+ 63     rg = reset HEAD^
+ 64     rh = reset --hard
+ 65     rhd = reset --hard o/HEAD
+ 66     rp = remote prune
+ 67     rpo = remote prune o
+ 68     rroo = remote rename origin o
+ 69     rs = reset
+ 70     save = stash
+ 71     slog = log --graph --decorate --oneline --all --simplify-by-decoration
+ 72     sm = submodule
+ 73     squash = rebase HEAD~2 -i
+ 74     st = status
+ 75     sv = stash
+ 76     unchanged = update-index --assume-unchanged  # assume a file is unchanged, often use to change some local config
+ 77     unhide = update-index --no-assume-unchanged  # same with `git changed`
+ 78     wp = commit --all --message 'feat: WIP' --allow-empty --no-verify  # commit with Work In Progress quickly
+ 79     yes = log --oneline --since yesterday --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'     --abbrev-commit --date=relative --no-merges  # see what's new since yesterday
